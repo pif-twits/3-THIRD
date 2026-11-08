@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pifagor Trade | NUPL Timeline</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --neon: #00FF41;
+            --text-main: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --panel-bg: rgba(20, 20, 20, 0.8);
+            --line-color: #333;
+        }
+        body {
+            margin: 0; padding: 0; background-color: var(--bg); color: var(--text-main);
+            font-family: 'Inter', sans-serif; overflow-x: hidden;
+            background-image: radial-gradient(circle at 15% 50%, rgba(0, 255, 65, 0.04) 0%, transparent 50%),
+                              radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+        .logo-top {
+            font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.2rem;
+            color: transparent; -webkit-text-stroke: 1px var(--neon); letter-spacing: 2px;
+            display: flex; align-items: center; gap: 10px; margin-bottom: 50px;
+        }
+        .logo-top span { font-family: 'Caveat', cursive; font-size: 1.8rem; color: var(--text-main); -webkit-text-stroke: 0; }
+
+        .header-title { text-align: center; margin-bottom: 60px; }
+        h1 {
+            font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 900; margin-bottom: 10px;
+            color: transparent; -webkit-text-stroke: 1.5px var(--neon); text-transform: uppercase; line-height: 1.1;
+        }
+        .subtitle { font-family: 'Caveat', cursive; font-size: 2rem; color: var(--text-main); opacity: 0.9; }
+
+        .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline::after {
+            content: ''; position: absolute; width: 4px; background-color: var(--line-color);
+            top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 2px;
+        }
+
+        .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; box-sizing: border-box; }
+        .timeline-item.left { left: 0; text-align: right; }
+        .timeline-item.right { left: 50%; text-align: left; }
+
+        .timeline-item::after {
+            content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: var(--bg);
+            border: 4px solid var(--neon); top: 25px; border-radius: 50%; z-index: 1; box-shadow: 0 0 15px rgba(0,255,65,0.5);
+        }
+        .timeline-item.right::after { left: -10px; }
+
+        .date {
+            font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.4rem; color: var(--neon);
+            margin-bottom: 5px; text-shadow: 0 0 10px rgba(0,255,65,0.3);
+        }
+        .title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem; margin-bottom: 10px; }
+        .text { font-size: 0.95rem; color: #d1d1d1; line-height: 1.6; margin-bottom: 15px; }
+        .text strong { color: var(--text-main); }
+        
+        .img-container {
+            background: var(--panel-bg); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-top: 15px;
+        }
+        .img-container img { width: 100%; border-radius: 6px; display: block; }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 15px; text-align: left; }
+            .timeline-item.right { left: 0%; }
+            .timeline-item::after { left: 21px; }
+            .timeline-item.left::after { left: 21px; right: auto; }
+            .timeline-item.left { text-align: left; }
+            h1 { font-size: 2rem; } .subtitle { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-top">PIFAGOR TRADE <span>math trade</span></div>
+
+        <div class="header-title">
+            <h1>On-Chain Аналитика</h1>
+            <div class="subtitle">NUPL: Хронология цикла</div>
+            <div style="font-size: 0.9rem; color: #555; margin-top: 20px; letter-spacing: 2px;">СРЕЗ ДАННЫХ: 07.11.2026</div>
+        </div>
+
+        <div class="timeline">
+            <!-- Item 1 -->
+            <div class="timeline-item left">
+                <div class="date">31 января 2025</div>
+                <div class="title">Исторический High</div>
+                <div class="text">Начало затяжного снижения метрики NUPL. Точка отсчета для расчета длительности цикла.</div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item right">
+                <div class="date">18 августа 2026</div>
+                <div class="title">Формирование Low (564 дня)</div>
+                <div class="text">
+                    Снижение от *High* (31 января 2025) до Low (18 августа 2026) заняло <strong>564 дня</strong>. Временные рамки (норма): <strong>[ 423 - 631 ] день</strong>.<br><br>
+                    Ожидаемый диапазон завершения: [30 марта - 24 октября 2026]. Снижение приостановилось в этих рамках, затем 2.5 месяца роста. BTC формирует Low первым, NUPL — позже. Снижение завершено, Low сформирован 18.08.2026.
+                </div>
+                <div class="img-container"><img src="graph_down.png" alt="График снижения"></div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item left">
+                <div class="date">17 сентября 2026</div>
+                <div class="title">Закрепление выше 0.25</div>
+                <div class="text">
+                    Показатель закрепился выше <strong>0.25</strong>. Переход из стадии <strong>"Страха"</strong> в стадию <strong>"Оптимизма"</strong>.<br><br>
+                    Ожидаемый диапазон Low-Low: [18 июля - 29 ноября 2026]. Движение заняло 1318 дней (в норме). Запас времени 23 дня. Показатель закрепился выше 0.25. Вывод: Low 2026 истинный. Цель — уровень 0.6.
+                </div>
+                <div class="img-container"><img src="graph_model.png" alt="График моделирования"></div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item right">
+                <div class="date">Текущий момент</div>
+                <div class="title">Мы находимся здесь (WE HERE)</div>
+                <div class="text">
+                    Рыночная ситуация изменилась в пользу развития восходящего тренда. Преодоление 0.6 (стадия "Веры") станет предвестником кульминационной фазы роста.
+                </div>
+                <div class="img-container"><img src="graph_current.png" alt="График текущей ситуации"></div>
+            </div>
+        </div>
+
+        <div class="footer" style="text-align: center; margin-top: 60px; font-size: 0.9rem; color: var(--text-muted); border-top: 1px solid #333; padding-top: 20px;">
+            &copy; Pifagor Trade. All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>
